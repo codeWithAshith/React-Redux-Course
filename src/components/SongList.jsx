@@ -5,4 +5,10 @@ const SongList = () => {
   return <div>SongList</div>;
 };
 
-export default connect()(SongList);
+const mapsStateToProps = (state) => {
+  console.log(state);
+
+  return state;
+};
+
+export default connect(mapsStateToProps)(SongList);

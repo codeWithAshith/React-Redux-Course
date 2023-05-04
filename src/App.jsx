@@ -1,7 +1,9 @@
+import SongList from "./components/SongList";
+
 const App = () => {
   return (
     <div>
-      <h1>Hi, there</h1>
+      <SongList />
     </div>
   );
 };
