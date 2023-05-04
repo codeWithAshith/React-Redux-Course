@@ -1,3 +1,4 @@
+import SongDetails from "./components/SongDetails";
 import SongList from "./components/SongList";
 
 const App = () => {
@@ -6,6 +7,9 @@ const App = () => {
       <div className="ui row">
         <div className="column eight wide">
           <SongList />
+        </div>
+        <div className="column eight wide">
+          <SongDetails />
         </div>
       </div>
     </div>
