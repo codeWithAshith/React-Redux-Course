@@ -9,12 +9,22 @@ class PostList extends Component {
 
   render() {
     return (
-      <div>
+      <div className="ui container">
         <h3>PostList</h3>
-        <div>
+        <div className="ui relaxed divided list">
           {this.props.posts &&
             this.props.posts.map((post) => {
-              return <p>{post.title}</p>;
+              return (
+                <div className="item" key={post.id}>
+                  <i className="large middle aligned icon user"></i>
+                  <div className="content">
+                    <div className="description">
+                      <h2>{post.title}</h2>
+                      <p>{post.body}</p>
+                    </div>
+                  </div>
+                </div>
+              );
             })}
         </div>
       </div>
