@@ -1,4 +1,4 @@
-// npm i redux-thunk
+import _ from "lodash";
 
 import jsonPlaceholder from "../api/jsonPlaceholder";
 
@@ -12,12 +12,13 @@ export const fetchPosts = () => {
   };
 };
 
+// npm i lodash
 export const fetchUser = (id) => {
-  return async (dispatch) => {
+  return _.memoize(async (dispatch) => {
     const response = await jsonPlaceholder.get(`/users/${id}`);
     dispatch({
       type: "FETCH_USER",
       payload: response.data,
     });
-  };
+  });
 };
