@@ -4,7 +4,7 @@ import { fetchPost } from "../actions";
 
 const PostList = () => {
   useEffect(() => {
-    console.log(fetchPost().payload);
+    console.log(fetchPost());
   });
 
   return <div>PostList</div>;

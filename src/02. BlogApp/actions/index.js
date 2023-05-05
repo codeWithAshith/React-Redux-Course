@@ -1,10 +1,13 @@
+// npm i redux-thunk
+
 import jsonPlaceholder from "../api/jsonPlaceholder";
 
 export const fetchPost = () => {
-  // bad way, we require middleware
-  const promise = jsonPlaceholder.get("/posts");
-  return {
-    type: "FETCH_POSTS",
-    payload: promise,
+  return async (dispatch) => {
+    const response = await jsonPlaceholder.get("/posts");
+    dispatch({
+      type: "FETCH_POSTS",
+      payload: response,
+    });
   };
 };
