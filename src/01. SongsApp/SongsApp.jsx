@@ -1,7 +1,7 @@
 import SongDetails from "./components/SongDetails";
 import SongList from "./components/SongList";
 
-const App = () => {
+const SongsApp = () => {
   return (
     <div className="ui container grid">
       <div className="ui row">
@@ -16,4 +16,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default SongsApp;
